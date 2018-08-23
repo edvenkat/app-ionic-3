@@ -1,0 +1,106 @@
+page-home {
+	ion-segment {
+		display: block;
+		white-space: nowrap;
+		font-size: 0;
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+			display: none;
+		}
+
+		ion-segment-button.segment-button {
+			display: inline-block;
+			min-width: 100px;
+			width: auto;
+		}
+	}
+    ion-slides {
+        width: 100%;
+        height: initial;
+        overflow:auto;
+    }
+    
+    ion-content ion-slide {
+       // margin-top:18px;
+    }
+    .our-logo-facebook{
+        background-color: #3B5B8E !important;
+    }
+    .ion-logo-facebook,.ion-logo-twitter,.ion-logo-youtube,.ion-logo-googleplus {
+        color:white !important;
+    }
+    .our-logo-twitter{
+        background-color: #53A5E6 !important;
+    }
+    .our-logo-googleplus{
+        background-color: #D45236 !important;
+    }
+    .our-logo-youtube {
+        background-color: #E33E36 !important;
+    }
+    
+    .our-logo-rss {
+        background-color: #FE8D10 !important;
+    }
+    .our-logo-newletter {
+        background-color: #FE8D10 !important;
+    }
+    .social_share {
+        bottom:80px;
+    }
+    
+}
+/*
+.toolbar-background-ios, .toolbar-background-md {
+    background-color: red!important;
+}
+*/
+ .filters {
+
+        ion-col {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+
+            ion-icon {
+                color: #ccc;
+            }
+
+            &.col-with-arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        p {
+            color: #000;
+            margin: 0;
+            font-size: 1.6rem;
+            line-height: 5rem;
+        }
+
+        .selected {
+            font-weight: 700;
+        }
+    }
+
+.fab-menu-overlay {
+ //@include transition(all 0.2s ease 0.2s);
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+
+  &.active {
+    display: block;
+  }
+}

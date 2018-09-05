@@ -6,6 +6,8 @@ import { DetailsPage } from '../details/details';
 import { ListPage } from '../list/list';
 import { Search } from '../search/search';
 
+import { WebService } from '../../providers/web-service';
+
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -28,7 +30,12 @@ export class HomePage {
      }
     
 
-    constructor(public navCtrl: NavController,public events: Events) {
+    constructor(public navCtrl: NavController,public events: Events,public webService: WebService) {
+	  platform.ready().then(() => {
+		//this.createBanner();
+		//this.showInterstitial();
+        this.webService.getHomePageContent()
+    });
         this.events.subscribe('slidechange:tabSelected', eventData => { 
             const selectedIndex = this.slidersHeader.findIndex((slide) => {
                 return slide.id === eventData;

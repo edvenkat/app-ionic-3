@@ -10,6 +10,8 @@ import { DetailsPage } from '../pages/details/details';
 import { ListPage } from '../pages/list/list';
 import { Search } from '../pages/search/search';
 
+import { HttpModule } from '@angular/http';
+import { WebService } from '../providers/web-service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { Search } from '../pages/search/search';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,6 +37,7 @@ import { Search } from '../pages/search/search';
   providers: [
     StatusBar,
     SplashScreen,
+    WebService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
